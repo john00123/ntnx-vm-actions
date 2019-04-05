@@ -1,0 +1,23 @@
+//main:style.scss
+
+.flyout{
+  position: absolute;
+  left: 250px;
+  background-color: white;
+  z-index: 100;
+  transform: translateY(-40px);
+  padding: 5px 0;
+  border-radius: 0 4px 4px 0;
+  display: none;
+  border-left: 1px solid $border-color-3;
+}
+
+
+.subsection{
+  width: 250px;
+
+}
+
+.section:hover{
+  .flyout{display: inherit;}
+}

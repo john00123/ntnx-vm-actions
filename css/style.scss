@@ -1,0 +1,128 @@
+//Comment for compiler
+@import '../../_ntnx/variables';
+@import '../../_ntnx/mixins';
+@import 'base';
+@import 'option2';
+
+html{
+  @include font;
+  background-color: $background-color-3;
+}
+
+body{
+  @include flex(center, start, column);
+  @include size(100vh, 100%);
+  margin-top: 120px;
+}
+
+button{
+  @include secondary;
+
+  border-color: transparent;
+  @include transition(box-shadow)
+
+  &:hover{
+    @include shadow
+    svg{background-color: $light-blue-3}
+    svg polyline{stroke: $blue-1}
+  }
+
+  &:active{
+    box-shadow: none;
+    color:$dark-blue-2;
+    svg polyline{stroke: $dark-blue-2};
+  }
+}
+
+
+
+svg polyline{ stroke: $font-color-2}
+
+svg{
+  background-color: $background-color-3;
+  padding: 5px 4px;
+  border-radius: 4pc;
+  margin-left: 10px;
+}
+
+.menu{
+  display: none;
+  background: white;
+  border-radius: 2px;
+  min-width: 250px;
+  margin-top: 10px;
+  padding: 10px 0 0 0;
+  position: relative;
+
+  svg{
+    transform: rotate(-90deg);
+    background: none;
+  }
+}
+
+.menu li, .menu span{
+  line-height: 35px;
+  list-style: none;
+  padding: 0 15px;
+}
+
+
+
+.menu li:hover, .menu span:hover{
+  background-color: $blue-1;
+  color:white;
+  cursor: pointer;
+  polyline{stroke:white;}
+}
+
+
+.menu span:hover{
+  cursor: default;
+}
+.menu li:active{
+  background-color:$dark-blue-3;
+}
+
+
+
+kbd{
+  line-height: 35px;
+  list-style: none;
+  padding: 0 15px;
+  font-size: 12px;
+  color:  $font-color-3;
+}
+
+hr{
+  background-color: $border-color-3;
+  height: 1px;
+  width: 100%;
+  padding: 0;
+  margin: 5px 0;
+  border: none;
+  &:last-of-type{
+    margin-top: 5px;
+    background-color: transparent}
+}
+
+.expand{
+  position: absolute;
+  bottom: -2px;
+  background: white;
+  border-top: 1px solid $border-color-3;
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+
+  &:hover{
+    color: $blue-1;
+    cursor: pointer;
+  }
+}
+
+
+#expand{
+  border-radius: 4pc;
+  position:absolute;
+  top: 20px;
+}
