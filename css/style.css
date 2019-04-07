@@ -347,6 +347,7 @@ button:active svg polyline {
 
 svg polyline {
   stroke: #627386;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 svg {

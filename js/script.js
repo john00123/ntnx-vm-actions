@@ -8,18 +8,24 @@ const items = [
     sub:['Power On','Power Off','Pause/Suspend','Resume'],
     type: 'nested',
   },
-  { name: 'Data Protection Operations',
-    sub:['Protect','Unprotect','Snapshot','Migrate','Add to Recovery Plan'],
+
+  { name: 'Protection Security',
+    sub:['Protect','Unprotect','Snapshot','Migrate','Add to Recovery Plan','Quarantine VMs','Unquarantine VMs','Configure VM Host-Affinity','Configure VM Anti Host-Affinity'],
     type: 'nested',
   },
-  { name: 'Security Policy - Quarantine',
-    sub:['Quarantine VMs','Unquarantine VMs'],
-    type: 'nested',
-  },
-  { name: 'Affinity Policy',
-    sub:['Configure VM Host-Affinity','Configure VM Anti Host-Affinity'],
-    type: 'nested',
-  },
+  //
+  // { name: 'Data Protection Operations',
+  //   sub:['Protect','Unprotect','Snapshot','Migrate','Add to Recovery Plan'],
+  //   type: 'nested',
+  // },
+  // { name: 'Security Policy - Quarantine',
+  //   sub:['Quarantine VMs','Unquarantine VMs'],
+  //   type: 'nested',
+  // },
+  // { name: 'Affinity Policy',
+  //   sub:['Configure VM Host-Affinity','Configure VM Anti Host-Affinity'],
+  //   type: 'nested',
+  // },
   { name: '',
     sub:['Run Playbooks','Manage Categories'],
     type: 'single',
@@ -44,29 +50,26 @@ $('#actions').append(`${arrow}`);
 $('#actions').after(` <div class='menu'></div>`);
 items.map(key => $('.menu').append(`
   <div class='section'>
-  ${key.name? `<span hcd> ${key.name} ${arrow}</span>`: '' }
+    ${key.name? `<span hcd> ${key.name} ${arrow}</span>`: '' }
     <div class='subsection ${key.type =='nested'? 'flyout':''}'>
       ${key.sub.map(sub => `<li hcs>${sub}</li>`).join('')}
     </div>
-  </div>
-  <hr/>
+  </div> <hr/>
 `))
 
-$('li').click(function(){
-  alert($(this).text())
+$('li').click(function(){ alert($(this).text())})
 
-})
-
-  // $('.section').eq(0).before('<kbd>VM Management</kbd>');
-  // $('.section').eq(2).before('<kbd>Protection and security</kbd>');
-  // $('.section').eq(5).before('<kbd>Administration</kbd>');
-  // $('.section').eq(7).before('<kbd>Tools</kbd>');
-  // $('hr').eq(3).remove();
-  // $('hr').eq(2).remove();
+// $('.section').eq(0).before('<kbd>VM Management</kbd>');
+$('.section').eq(2).before('<kbd>Protection and security</kbd>');
+$('.section').eq(5).before('<kbd>Administration</kbd>');
+// $('.section').eq(7).before('<kbd>Tools</kbd>');
+// $('hr').eq(3).remove();
+// $('hr').eq(2).remove();
 
 
 function show(){
   let button = $('#actions')
   $('.menu').fadeToggle(100);
   $('.menu').animate({ scrollTop: "0" });
+  $('#actions svg').toggleClass('rotate');
 }

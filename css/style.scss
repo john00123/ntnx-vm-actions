@@ -23,8 +23,10 @@ button{
 
   &:hover{
     @include shadow
-    svg{background-color: $light-blue-3}
-    svg polyline{stroke: $blue-1}
+    svg{
+
+      background-color: $light-blue-3}
+    svg polyline{stroke: $blue-1;}
   }
 
   &:active{
@@ -36,7 +38,10 @@ button{
 
 
 
-svg polyline{ stroke: $font-color-2}
+svg polyline{
+  stroke: $font-color-2;
+  @include transition(transform);
+}
 
 svg{
   background-color: $background-color-3;
