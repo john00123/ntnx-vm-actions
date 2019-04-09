@@ -27,11 +27,13 @@ Access the script.js file and manipulate the array of objects followin the appen
     type: 'single'
   }
   ```
-    
+
 * Technologies using this
     - `HTML/CSS`
     - `JQUERY`
     
+## Live example
+https://john00123.github.io/ntnx-vm-actions/
 ## Screenshots
 <img src= 'https://github.com/john00123/ntnx-vm-actions/blob/master/screenshots/screen1.png?raw=true' width=800px/>
 
