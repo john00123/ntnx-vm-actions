@@ -10,7 +10,7 @@ const items = [
   },
 
   { name: 'Protection Security',
-    sub:['Protect','Unprotect','Snapshot','Migrate','Add to Recovery Plan','Quarantine VMs','Unquarantine VMs','Configure VM Host-Affinity','Configure VM Anti Host-Affinity'],
+    sub:['Protect','Unprotect','Snapshot','Migrate','Add to Recovery Plan','_','Quarantine VMs','Unquarantine VMs','_','Configure VM Host-Affinity','Configure VM Anti Host-Affinity'],
     type: 'nested',
   },
   //
