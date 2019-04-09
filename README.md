@@ -9,6 +9,9 @@ Users will be able to move from one screen to another and go back, affecting the
 
 Either Clone or Fork this repository and run (in your terminal).
 
+* How to edit
+Access the script.js file and manipulate the array of objects followin the appended logic. 
+
 * For nested Elements
 ```javascript
  { name:'Protection Security',
