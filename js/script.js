@@ -46,8 +46,19 @@ const items = [
 
 ///
 
+
+// $.getJSON(filename, function (data) {
+//   renderNavigation(data);
+// })
+//   .fail(function (jqxhr, textStatus, error) {
+//     alert("Request Failed: " + filename + ", " + error);
+// });
+
+
 $('#actions').append(`${arrow}`);
 $('#actions').after(` <div class='menu'></div>`);
+
+
 items.map(key => $('.menu').append(`
   <div class='section'>
     ${key.name? `<span hcd> ${key.name} ${arrow}</span>`: '' }

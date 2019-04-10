@@ -1,0 +1,71 @@
+[
+  {
+    "type": "GROUP",
+    "title": "Cost Governance",
+    "nav": [
+      {
+        "type": "GROUP_SECTION",
+        "title": "Dashboard"
+      },
+      {
+        "type": "ACTION",
+        "title": "Dashboard"
+      },
+      {
+        "type": "PAGE",
+        "title": "Analyse"
+      },
+      {
+        "type": "PAGE",
+        "title": "Save"
+      },
+      {
+        "type": "PAGE",
+        "title": "Ria"
+      },
+      {
+        "type": "PAGE",
+        "title": "Chargeback"
+      },
+      {
+        "type": "PAGE",
+        "title": "Budget"
+      },
+      {
+        "type": "PAGE",
+        "title": "History"
+      },
+      {
+        "type": "PAGE",
+        "title": "Reports"
+      }
+    ]
+  },
+
+  {
+    "type": "PARENT",
+    "title": "Security Compliance",
+    "nav": [
+      {
+        "type": "PAGE",
+        "title": "Dashboard"
+      },
+      {
+        "type": "PAGE",
+        "title": "Compliance Remediation"
+      },
+      {
+        "type": "PAGE",
+        "title": "Inventory"
+      },
+      {
+        "type": "PAGE",
+        "title": "History"
+      },
+      {
+        "type": "PAGE",
+        "title": "Reports"
+      }
+    ]
+  }
+]
